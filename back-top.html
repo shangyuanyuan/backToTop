@@ -9,7 +9,7 @@
 <link href="" rel="stylesheet">
 <style>
 	.backtotop {
- /*display: none;*/
+ display: none;
         position: fixed;
         _position: absolute;
         right: 10px;
@@ -33,15 +33,15 @@ p{ height:500px; }
     <script type="text/javascript" src="http://static01.babytreeimg.com/img/js/jquery-1.6.4.1.min.js?ver=1352800879"></script>
 <script>
 	$(function(){
-		var $backToTopTxt = "", $backToTopEle = $(".backtotop")
+		var $backToTopTxt = "", $backToTopEle = $('<div class="backtotop"></div>').appendTo($("body"))
         .text($backToTopTxt).attr("title", $backToTopTxt).click(function() {
             $("html, body").animate({ scrollTop: 0 }, 120);
     }), $backToTopFun = function() {
         var st = $(document).scrollTop(), winh = $(window).height();
-//        (st > 0)? $backToTopEle.show(): $backToTopEle.hide();
+        (st > 0)? $backToTopEle.show(): $backToTopEle.hide();
         //IE6
-//        if (!window.XMLHttpRequest) {$backToTopEle.css("top", st + winh - 166);
-//        }
+        if (!window.XMLHttpRequest) {$backToTopEle.css("top", st + winh - 166);
+        }
     };
     $(window).bind("scroll", $backToTopFun);
 	})
@@ -54,9 +54,8 @@ p{ height:500px; }
     <p>我是来占位的</p>
     <p>我是来占位的</p>
     <p>我是来占位的</p>
-<div class="backtotop">
+<!--<div class="backtotop">-->
 
-</div>
-
+<!--</div>-->
 </body>
 </html>
