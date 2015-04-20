@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04db4809-704f-4b01-9967-7650f14d180a" name="!changes.default.changelist.name!" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back-top.html" afterPath="$PROJECT_DIR$/back-top.html" />
-    </list>
+    <list default="true" id="04db4809-704f-4b01-9967-7650f14d180a" name="!changes.default.changelist.name!" comment="" />
     <ignored path="backToTop.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
