@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>回到顶部</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style>
+	.backtotop {
+ /*display: none;*/
+        position: fixed;
+        _position: absolute;
+        right: 10px;
+        bottom: 100px;
+        _bottom: "auto";
+        width: 19px;
+        height:77px;
+        padding: 5px 0;
+        font-size: 12px;
+        line-height: 1.2;
+        color: #fff;
+        text-align: center;
+         background:#ff6600;
+         cursor: pointer;
+         filter:alpha(opacity=100);
+         -moz-opacity:1;
+         opacity:1;
+}
+p{ height:500px; }
+</style>
+    <script type="text/javascript" src="http://static01.babytreeimg.com/img/js/jquery-1.6.4.1.min.js?ver=1352800879"></script>
+<script>
+	$(function(){
+		var $backToTopTxt = "", $backToTopEle = $('<div class="backtotop"></div>').appendTo($("body"))
+        .text($backToTopTxt).attr("title", $backToTopTxt).click(function() {
+            $("html, body").animate({ scrollTop: 0 }, 120);
+    }), $backToTopFun = function() {
+        var st = $(document).scrollTop(), winh = $(window).height();
+        (st > 0)? $backToTopEle.show(): $backToTopEle.hide();
+        //IE6
+        if (!window.XMLHttpRequest) {$backToTopEle.css("top", st + winh - 166);
+        }
+    };
+    $(window).bind("scroll", $backToTopFun);
+	})
+	
+</script>
+</head>
+<body>
+    <p>我是来占位的</p>
+    <p>我是来占位的</p>
+    <p>我是来占位的</p>
+    <p>我是来占位的</p>
+    <p>我是来占位的</p>
+
+</body>
+</html>
